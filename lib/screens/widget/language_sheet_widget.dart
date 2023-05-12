@@ -5,11 +5,12 @@ import 'package:provider/provider.dart';
 import '../../provider/app_provider.dart';
 
 class LanguageSheetWidget extends StatelessWidget {
-  LanguageSheetWidget({Key? key}) : super(key: key);
+  const LanguageSheetWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var languageProvider = Provider.of<AppProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -28,7 +29,7 @@ class LanguageSheetWidget extends StatelessWidget {
                           color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
-                Spacer(),
+                const Spacer(),
                 Visibility(
                   visible: languageProvider.language == 'en' ? true : false,
                   child: Icon(
@@ -42,7 +43,7 @@ class LanguageSheetWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           InkWell(
             onTap: () {
               languageProvider.changeLanguage('ar');
@@ -57,7 +58,7 @@ class LanguageSheetWidget extends StatelessWidget {
                           color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
-                Spacer(),
+                const Spacer(),
                 Visibility(
                   visible: languageProvider.language == 'ar' ? true : false,
                   child: Icon(

@@ -9,6 +9,8 @@ import 'package:todo_app/screens/widget/theme_sheet_widget.dart';
 class SettingTab extends StatelessWidget {
   static const String routeName = 'Setting Screen';
 
+  const SettingTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     var settingProvider = Provider.of<AppProvider>(context);
@@ -21,51 +23,25 @@ class SettingTab extends StatelessWidget {
             AppLocalizations.of(context)!.language,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SettingMenuContainer(
               text: settingProvider.language == 'en'
                   ? AppLocalizations.of(context)!.english
                   : AppLocalizations.of(context)!.arabic,
-              widgetFunction: LanguageSheetWidget()),
-          SizedBox(height: 20),
+              widgetFunction: const LanguageSheetWidget()),
+          const SizedBox(height: 20),
           Text(
-            'Mode',
+            AppLocalizations.of(context)!.theme,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SettingMenuContainer(
               text: settingProvider.themeMode == ThemeMode.light
                   ? AppLocalizations.of(context)!.light
                   : AppLocalizations.of(context)!.dark,
               widgetFunction: ThemeSheetWidget()),
-          SizedBox(height: 40),
-          // Container(
-          //   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          //   width: double.infinity,
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(20),
-          //     border: Border.all(color: Theme.of(context).colorScheme.primary),
-          //   ),
-          //   child: Row(
-          //     children: [
-          //       Text(
-          //         'test',
-          //         style: Theme.of(context)
-          //             .textTheme
-          //             .titleSmall!
-          //             .copyWith(color: Theme.of(context).colorScheme.primary),
-          //       ),
-          //       Spacer(),
-          //       IconButton(onPressed: () {
-          //        showModalBottomSheet(context: context, builder: (context) {
-          //          return ThemeSheetWidget();
-          //        },);
-          //       }, icon: Icon(Icons.arrow_drop_down, size: 30, color: Theme.of(context).colorScheme.primary,),),
-          //     ],
-          //   ),
-          // )
         ],
       ),
     );

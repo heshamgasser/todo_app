@@ -14,7 +14,7 @@ class TaskWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20)),
         child: ListTile(
           isThreeLine: true,
-          contentPadding: EdgeInsets.all(20),
+          contentPadding: const EdgeInsets.all(20),
           leading: SizedBox(
             height: MediaQuery.of(context).size.height * .2,
             child: VerticalDivider(
@@ -33,7 +33,7 @@ class TaskWidget extends StatelessWidget {
                 color: Theme.of(context).colorScheme.surface,
                 size: 15,
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               Text(
                 '10:30 AM',
                 style: Theme.of(context).textTheme.bodySmall,

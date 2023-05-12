@@ -6,6 +6,8 @@ import 'package:todo_app/screens/task_tab.dart';
 class SplashScreen extends StatefulWidget {
   static const String routeName = 'Splash Screen';
 
+  const SplashScreen({super.key});
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -14,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () {
         Navigator.pushReplacementNamed(context, TaskTab.routeName);
       },
