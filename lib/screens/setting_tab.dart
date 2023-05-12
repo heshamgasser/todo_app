@@ -40,32 +40,6 @@ class SettingTab extends StatelessWidget {
                   ? AppLocalizations.of(context)!.light
                   : AppLocalizations.of(context)!.dark,
               widgetFunction: ThemeSheetWidget()),
-          SizedBox(height: 40),
-          // Container(
-          //   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          //   width: double.infinity,
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(20),
-          //     border: Border.all(color: Theme.of(context).colorScheme.primary),
-          //   ),
-          //   child: Row(
-          //     children: [
-          //       Text(
-          //         'test',
-          //         style: Theme.of(context)
-          //             .textTheme
-          //             .titleSmall!
-          //             .copyWith(color: Theme.of(context).colorScheme.primary),
-          //       ),
-          //       Spacer(),
-          //       IconButton(onPressed: () {
-          //        showModalBottomSheet(context: context, builder: (context) {
-          //          return ThemeSheetWidget();
-          //        },);
-          //       }, icon: Icon(Icons.arrow_drop_down, size: 30, color: Theme.of(context).colorScheme.primary,),),
-          //     ],
-          //   ),
-          // )
         ],
       ),
     );
