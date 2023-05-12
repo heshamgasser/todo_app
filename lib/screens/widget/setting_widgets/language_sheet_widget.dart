@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-import '../../provider/app_provider.dart';
+import '../../../provider/app_provider.dart';
 
 class LanguageSheetWidget extends StatelessWidget {
   const LanguageSheetWidget({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class LanguageSheetWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           InkWell(
             onTap: () {
@@ -26,7 +27,7 @@ class LanguageSheetWidget extends StatelessWidget {
                   AppLocalizations.of(context)!.english,
                   style: languageProvider.language == 'en'
                       ? Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.primary)
+                      color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
                 const Spacer(),
@@ -55,7 +56,7 @@ class LanguageSheetWidget extends StatelessWidget {
                   AppLocalizations.of(context)!.arabic,
                   style: languageProvider.language == 'ar'
                       ? Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.primary)
+                      color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
                 const Spacer(),

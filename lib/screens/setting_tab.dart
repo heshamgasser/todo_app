@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/provider/app_provider.dart';
-import 'package:todo_app/screens/widget/language_sheet_widget.dart';
-import 'package:todo_app/screens/widget/setting_menu_container.dart';
-import 'package:todo_app/screens/widget/theme_sheet_widget.dart';
+import 'package:todo_app/screens/widget/setting_widgets/language_sheet_widget.dart';
+import 'package:todo_app/screens/widget/setting_widgets/setting_menu_container.dart';
+import 'package:todo_app/screens/widget/setting_widgets/theme_sheet_widget.dart';
 
 class SettingTab extends StatelessWidget {
   static const String routeName = 'Setting Screen';

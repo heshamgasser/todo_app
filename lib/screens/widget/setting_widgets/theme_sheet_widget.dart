@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-import '../../provider/app_provider.dart';
+import '../../../provider/app_provider.dart';
 
 class ThemeSheetWidget extends StatelessWidget {
   ThemeSheetWidget({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class ThemeSheetWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           InkWell(
             onTap: () {
@@ -26,13 +27,13 @@ class ThemeSheetWidget extends StatelessWidget {
                   AppLocalizations.of(context)!.light,
                   style: themeProvider.themeMode == ThemeMode.light
                       ? Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.primary)
+                      color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
                 const Spacer(),
                 Visibility(
                   visible:
-                      themeProvider.themeMode == ThemeMode.light ? true : false,
+                  themeProvider.themeMode == ThemeMode.light ? true : false,
                   child: Icon(
                     Icons.done,
                     size: 30,
@@ -56,13 +57,13 @@ class ThemeSheetWidget extends StatelessWidget {
                   AppLocalizations.of(context)!.dark,
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.primary)
+                      color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
                 const Spacer(),
                 Visibility(
                   visible:
-                      themeProvider.themeMode == ThemeMode.dark ? true : false,
+                  themeProvider.themeMode == ThemeMode.dark ? true : false,
                   child: Icon(
                     Icons.done,
                     size: 30,
