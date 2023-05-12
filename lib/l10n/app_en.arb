@@ -4,5 +4,15 @@
   "english": "English",
   "arabic": "Arabic",
   "light": "Light Theme",
-  "dark": "Dark Theme"
+  "dark": "Dark Theme",
+  "addTask": "Add New task",
+  "taskTitle": "Enter Your Task Title",
+  "taskDetail": "Enter Your Task Details",
+  "selectStartDate": "Select Start Date",
+  "selectEndDate": "Select End Date",
+  "startTime": "Start Time",
+  "endTime": "End Time",
+  "add": "Add",
+  "cancel": "Cancel",
+  "fieldRequired": "Field Required"
 }
