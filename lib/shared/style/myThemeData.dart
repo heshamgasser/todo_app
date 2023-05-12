@@ -5,7 +5,7 @@ import 'package:todo_app/shared/style/app_text.dart';
 class MyThemeData {
   static ThemeData lightTheme = ThemeData(
     // useMaterial3: true,
-    colorScheme: ColorScheme(
+    colorScheme: const ColorScheme(
         brightness: Brightness.light,
         primary: lightPrimaryColor,
         onPrimary: lightPrimaryColor,
@@ -18,7 +18,7 @@ class MyThemeData {
         surface: Colors.black,
         onSurface: Colors.white),
     scaffoldBackgroundColor: lightBackgroundColor,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       color: lightPrimaryColor,
       foregroundColor: Colors.white,
       // shape: RoundedRectangleBorder(
@@ -40,7 +40,7 @@ class MyThemeData {
 
   static ThemeData darkTheme = ThemeData(
     // useMaterial3: true,
-    colorScheme: ColorScheme(
+    colorScheme: const ColorScheme(
         brightness: Brightness.dark,
         primary: darkPrimaryColor,
         onPrimary: darkPrimaryColor,
@@ -53,7 +53,7 @@ class MyThemeData {
         surface: Colors.white,
         onSurface: Color(0xFF141922)),
     scaffoldBackgroundColor: darkBackgroundColor,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       color: darkPrimaryColor,
       foregroundColor: Colors.black,
       // shape: RoundedRectangleBorder(

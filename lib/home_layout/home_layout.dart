@@ -5,6 +5,8 @@ import 'package:todo_app/provider/home_layout_provider.dart';
 class HomeLayout extends StatelessWidget {
   static const String routeName = 'Home Layout';
 
+  const HomeLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -22,7 +24,7 @@ class HomeLayout extends StatelessWidget {
           ),
           bottomNavigationBar: BottomAppBar(
             color: Theme.of(context).colorScheme.onSurface,
-            shape: CircularNotchedRectangle(),
+            shape: const CircularNotchedRectangle(),
             notchMargin: 12,
             child: BottomNavigationBar(
               backgroundColor: Colors.transparent,
@@ -32,7 +34,7 @@ class HomeLayout extends StatelessWidget {
               onTap: (value) {
                 homeProvider.indexChange(value);
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.list), label: ''),
                 BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
               ],
@@ -42,10 +44,10 @@ class HomeLayout extends StatelessWidget {
               FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton(
             backgroundColor: Theme.of(context).colorScheme.primary,
-            shape:
-                StadiumBorder(side: BorderSide(color: Colors.white, width: 3)),
+            shape: const StadiumBorder(
+                side: BorderSide(color: Colors.white, width: 3)),
             onPressed: () {},
-            child: Icon(
+            child: const Icon(
               Icons.add,
               size: 30,
               color: Colors.white,

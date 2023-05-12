@@ -6,7 +6,7 @@ import '../screens/task_tab.dart';
 class HomelayoutProvider extends ChangeNotifier {
   int index = 0;
 
-  List<Widget> tabs = [TaskTab(), SettingTab()];
+  List<Widget> tabs = [const TaskTab(), const SettingTab()];
 
   void indexChange(int value) {
     index = value;

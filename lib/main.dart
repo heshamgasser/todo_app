@@ -10,7 +10,7 @@ import 'package:todo_app/shared/style/myThemeData.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-      create: (context) => AppProvider(), child: TodoApp()));
+      create: (context) => AppProvider(), child: const TodoApp()));
 }
 
 class TodoApp extends StatelessWidget {
@@ -24,23 +24,23 @@ class TodoApp extends StatelessWidget {
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
       themeMode: appProvider.themeMode,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate, // Add this line
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale('en'), // English
         Locale('ar'), // Arabic
       ],
       locale: Locale(appProvider.language),
       initialRoute: HomeLayout.routeName,
       routes: {
-        HomeLayout.routeName: (context) => HomeLayout(),
+        HomeLayout.routeName: (context) => const HomeLayout(),
         // SplashScreen.roteName:(context) => SplashScreen(),
-        TaskTab.routeName: (context) => TaskTab(),
-        SettingTab.routeName: (context) => SettingTab(),
+        TaskTab.routeName: (context) => const TaskTab(),
+        SettingTab.routeName: (context) => const SettingTab(),
       },
     );
   }

@@ -29,7 +29,7 @@ class ThemeSheetWidget extends StatelessWidget {
                           color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
-                Spacer(),
+                const Spacer(),
                 Visibility(
                   visible:
                       themeProvider.themeMode == ThemeMode.light ? true : false,
@@ -44,7 +44,7 @@ class ThemeSheetWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           InkWell(
             onTap: () {
               themeProvider.changeTheme(ThemeMode.dark);
@@ -59,7 +59,7 @@ class ThemeSheetWidget extends StatelessWidget {
                           color: Theme.of(context).colorScheme.primary)
                       : Theme.of(context).textTheme.bodyMedium,
                 ),
-                Spacer(),
+                const Spacer(),
                 Visibility(
                   visible:
                       themeProvider.themeMode == ThemeMode.dark ? true : false,

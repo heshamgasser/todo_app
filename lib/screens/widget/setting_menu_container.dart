@@ -4,7 +4,8 @@ class SettingMenuContainer extends StatelessWidget {
   String text;
   Widget widgetFunction;
 
-  SettingMenuContainer({required this.text, required this.widgetFunction});
+  SettingMenuContainer(
+      {super.key, required this.text, required this.widgetFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class SettingMenuContainer extends StatelessWidget {
         );
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -33,7 +34,7 @@ class SettingMenuContainer extends StatelessWidget {
                   .titleSmall!
                   .copyWith(color: Theme.of(context).colorScheme.primary),
             ),
-            Spacer(),
+            const Spacer(),
             Icon(
               Icons.arrow_drop_down,
               size: 30,

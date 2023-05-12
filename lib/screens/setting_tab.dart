@@ -9,6 +9,8 @@ import 'package:todo_app/screens/widget/theme_sheet_widget.dart';
 class SettingTab extends StatelessWidget {
   static const String routeName = 'Setting Screen';
 
+  const SettingTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     var settingProvider = Provider.of<AppProvider>(context);
@@ -21,20 +23,20 @@ class SettingTab extends StatelessWidget {
             AppLocalizations.of(context)!.language,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SettingMenuContainer(
               text: settingProvider.language == 'en'
                   ? AppLocalizations.of(context)!.english
                   : AppLocalizations.of(context)!.arabic,
-              widgetFunction: LanguageSheetWidget()),
-          SizedBox(height: 20),
+              widgetFunction: const LanguageSheetWidget()),
+          const SizedBox(height: 20),
           Text(
             AppLocalizations.of(context)!.theme,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SettingMenuContainer(
               text: settingProvider.themeMode == ThemeMode.light
                   ? AppLocalizations.of(context)!.light
