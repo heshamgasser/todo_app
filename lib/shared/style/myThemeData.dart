@@ -4,7 +4,7 @@ import 'package:todo_app/shared/style/app_text.dart';
 
 class MyThemeData {
   static ThemeData lightTheme = ThemeData(
-    useMaterial3: true,
+    // useMaterial3: true,
     colorScheme: ColorScheme(
         brightness: Brightness.light,
         primary: lightPrimaryColor,
@@ -21,12 +21,12 @@ class MyThemeData {
     appBarTheme: AppBarTheme(
       color: lightPrimaryColor,
       foregroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-        ),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.only(
+      //     bottomLeft: Radius.circular(20),
+      //     bottomRight: Radius.circular(20),
+      //   ),
+      // ),
       titleSpacing: 20,
     ),
     textTheme: TextTheme(
@@ -39,7 +39,7 @@ class MyThemeData {
   );
 
   static ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
+    // useMaterial3: true,
     colorScheme: ColorScheme(
         brightness: Brightness.dark,
         primary: darkPrimaryColor,
@@ -56,12 +56,12 @@ class MyThemeData {
     appBarTheme: AppBarTheme(
       color: darkPrimaryColor,
       foregroundColor: Colors.black,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-        ),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.only(
+      //     bottomLeft: Radius.circular(20),
+      //     bottomRight: Radius.circular(20),
+      //   ),
+      // ),
       titleSpacing: 20,
     ),
     textTheme: TextTheme(

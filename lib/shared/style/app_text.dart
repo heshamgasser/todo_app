@@ -30,4 +30,4 @@ TextStyle darkBodyTextSmall =
     GoogleFonts.roboto(fontSize: 12, color: Colors.white);
 
 TextStyle darkBodyTextMedium = GoogleFonts.roboto(
-    fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black);
+    fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white);
