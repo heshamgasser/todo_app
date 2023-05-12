@@ -31,7 +31,7 @@ class SettingTab extends StatelessWidget {
               widgetFunction: LanguageSheetWidget()),
           SizedBox(height: 20),
           Text(
-            'Mode',
+            AppLocalizations.of(context)!.theme,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           SizedBox(height: 20),
