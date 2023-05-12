@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class CustomElevatedButton extends StatelessWidget {
   String buttonText;
   Color buttonColor;
-  GlobalKey<FormState>? formKey;
+  Function onpressed;
 
   CustomElevatedButton(
       {required this.buttonText,
       required this.buttonColor,
-      this.formKey = null});
+      required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,7 @@ class CustomElevatedButton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        if (formKey != null) {
-          if (formKey!.currentState!.validate()) {}
-        } else {
-          Navigator.pop(context);
-        }
+        onpressed();
       },
       child: Text(
         buttonText,

@@ -3,16 +3,19 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomTaskFormField extends StatelessWidget {
   String label;
-  String hint;
-
   int maxLines;
+  TextEditingController controller;
 
   CustomTaskFormField(
-      {super.key, required this.label, required this.hint, this.maxLines = 1});
+      {super.key,
+      required this.label,
+      this.maxLines = 1,
+      required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       maxLines: maxLines,
       validator: (value) {
         if (value == null || value.isEmpty) {
@@ -22,7 +25,10 @@ class CustomTaskFormField extends StatelessWidget {
       },
       decoration: InputDecoration(
         labelText: label,
-        hintText: hint,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+        ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide(color: Theme.of(context).colorScheme.surface),

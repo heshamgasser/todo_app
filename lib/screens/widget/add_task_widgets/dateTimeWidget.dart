@@ -22,6 +22,7 @@ class DateTimeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var pro = Provider.of<DateProvider>(context);
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
           dateText,
@@ -35,7 +36,7 @@ class DateTimeWidget extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 border:
-                    Border.all(color: Theme.of(context).colorScheme.surface),
+                Border.all(color: Theme.of(context).colorScheme.surface),
                 borderRadius: BorderRadius.circular(20)),
             child: Text(
               displayedDate,
@@ -56,7 +57,7 @@ class DateTimeWidget extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 border:
-                    Border.all(color: Theme.of(context).colorScheme.surface),
+                Border.all(color: Theme.of(context).colorScheme.surface),
                 borderRadius: BorderRadius.circular(20)),
             child: Text(
               displayedtime,
