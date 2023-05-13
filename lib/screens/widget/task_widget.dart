@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TaskWidget extends StatelessWidget {
-  const TaskWidget({Key? key}) : super(key: key);
+  String taskTitle;
+
+  TaskWidget(this.taskTitle);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class TaskWidget extends StatelessWidget {
             ),
           ),
           title: Text(
-            'Play Basket Ball',
+            taskTitle,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           subtitle: Row(

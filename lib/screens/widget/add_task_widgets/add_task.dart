@@ -11,7 +11,6 @@ class AddingTask extends StatelessWidget {
   static final GlobalKey<FormState> formKey = GlobalKey();
   TextEditingController taskTitle = TextEditingController();
   TextEditingController taskdetail = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
