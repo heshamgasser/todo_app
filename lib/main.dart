@@ -39,7 +39,7 @@ class TodoApp extends StatelessWidget {
       routes: {
         HomeLayout.routeName: (context) => const HomeLayout(),
         // SplashScreen.roteName:(context) => SplashScreen(),
-        TaskTab.routeName: (context) => const TaskTab(),
+        TaskTab.routeName: (context) => TaskTab(),
         SettingTab.routeName: (context) => const SettingTab(),
       },
     );
