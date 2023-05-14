@@ -74,8 +74,17 @@ class DateProvider extends ChangeNotifier {
   String endTime = TimeOfDay.now().toString().substring(10, 15);
 
   void selectEndTime(BuildContext context) async {
-    TimeOfDay? selectedEndTime =
-        await showTimePicker(context: context, initialTime: TimeOfDay.now());
+    TimeOfDay? selectedEndTime = await showTimePicker(
+        builder: (context, child) => Theme(
+            data: Theme.of(context).copyWith(
+                colorScheme: Theme.of(context).colorScheme.copyWith(
+                    primary: Theme.of(context).colorScheme.primary,
+                    surface: Theme.of(context).colorScheme.onSurface,
+                    onPrimary: Theme.of(context).colorScheme.surface,
+                    onSurface: Theme.of(context).colorScheme.surface)),
+            child: child!),
+        context: context,
+        initialTime: TimeOfDay.now());
     if (selectedEndTime != null) {
       endTime = selectedEndTime.toString().substring(10, 15);
     }

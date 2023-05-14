@@ -8,7 +8,7 @@ class DateTimeWidget extends StatelessWidget {
   String displayedDate;
   String timeText;
   Function timeOnTapped;
-  String displayedtime;
+  String displayedTime;
 
   DateTimeWidget(
       {required this.dateText,
@@ -16,7 +16,7 @@ class DateTimeWidget extends StatelessWidget {
       required this.displayedDate,
       required this.timeText,
       required this.timeOnTapped,
-      required this.displayedtime});
+      required this.displayedTime});
 
   @override
   Widget build(BuildContext context) {
@@ -27,20 +27,20 @@ class DateTimeWidget extends StatelessWidget {
         Text(
           dateText,
           textAlign: TextAlign.start,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
         SizedBox(height: 10),
         InkWell(
           onTap: () => dateOnTapped(),
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
                 border:
-                Border.all(color: Theme.of(context).colorScheme.surface),
+                    Border.all(color: Theme.of(context).colorScheme.surface),
                 borderRadius: BorderRadius.circular(20)),
             child: Text(
               displayedDate,
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
         ),
@@ -48,20 +48,20 @@ class DateTimeWidget extends StatelessWidget {
         Text(
           timeText,
           textAlign: TextAlign.start,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
         SizedBox(height: 10),
         InkWell(
           onTap: () => timeOnTapped(),
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
                 border:
-                Border.all(color: Theme.of(context).colorScheme.surface),
+                    Border.all(color: Theme.of(context).colorScheme.surface),
                 borderRadius: BorderRadius.circular(20)),
             child: Text(
-              displayedtime,
-              style: Theme.of(context).textTheme.bodyMedium,
+              displayedTime,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
         ),

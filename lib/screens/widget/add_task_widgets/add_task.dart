@@ -9,8 +9,7 @@ import 'package:todo_app/screens/widget/add_task_widgets/dateTimeWidget.dart';
 class AddingTask extends StatelessWidget {
   AddingTask({Key? key}) : super(key: key);
   static final GlobalKey<FormState> formKey = GlobalKey();
-  TextEditingController taskTitle = TextEditingController();
-  TextEditingController taskdetail = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -38,12 +37,10 @@ class AddingTask extends StatelessWidget {
                   const SizedBox(height: 20),
                   CustomTaskFormField(
                     label: AppLocalizations.of(context)!.taskTitle,
-                    controller: taskTitle,
                   ),
                   const SizedBox(height: 20),
                   CustomTaskFormField(
                     label: AppLocalizations.of(context)!.taskDetail,
-                    controller: taskdetail,
                     maxLines: 5,
                   ),
                   const SizedBox(height: 20),
@@ -59,7 +56,7 @@ class AddingTask extends StatelessWidget {
                             timeText: AppLocalizations.of(context)!.startTime,
                             timeOnTapped: () =>
                                 dateTimeProvider.selectStartTime(context),
-                            displayedtime: dateTimeProvider.startTime),
+                            displayedTime: dateTimeProvider.startTime),
                       ),
                       SizedBox(width: 20),
                       SizedBox(
@@ -82,7 +79,7 @@ class AddingTask extends StatelessWidget {
                             timeText: AppLocalizations.of(context)!.endTime,
                             timeOnTapped: () =>
                                 dateTimeProvider.selectEndTime(context),
-                            displayedtime: dateTimeProvider.endTime),
+                            displayedTime: dateTimeProvider.endTime),
                       ),
                     ],
                   ),

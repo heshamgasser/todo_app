@@ -4,18 +4,16 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class CustomTaskFormField extends StatelessWidget {
   String label;
   int maxLines;
-  TextEditingController controller;
 
-  CustomTaskFormField(
-      {super.key,
-      required this.label,
-      this.maxLines = 1,
-      required this.controller});
+  CustomTaskFormField({
+    super.key,
+    required this.label,
+    this.maxLines = 1,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: controller,
       maxLines: maxLines,
       validator: (value) {
         if (value == null || value.isEmpty) {

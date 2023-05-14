@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/provider/home_layout_provider.dart';
 import 'package:todo_app/screens/widget/add_task_widgets/add_task.dart';
@@ -19,7 +20,7 @@ class HomeLayout extends StatelessWidget {
           appBar: AppBar(
             // toolbarHeight: MediaQuery.of(context).size.height * .3,
             title: Text(
-              'To Do List',
+              AppLocalizations.of(context)!.todoList,
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),

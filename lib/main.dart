@@ -10,15 +10,16 @@ import 'package:todo_app/shared/style/myThemeData.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-      create: (context) => AppProvider(), child: const TodoApp()));
+      create: (context) => AppProvider(), child: TodoApp()));
 }
 
 class TodoApp extends StatelessWidget {
-  const TodoApp({Key? key}) : super(key: key);
+  TodoApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var appProvider = Provider.of<AppProvider>(context);
+    appProvider.getSharedPreferences();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
