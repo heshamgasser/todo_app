@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/widget/task_widget.dart';
+import '../screens/widget/task_listTile/task_widget.dart';
 
 class TaskProvider extends ChangeNotifier {
   TextEditingController taskTitle = TextEditingController();

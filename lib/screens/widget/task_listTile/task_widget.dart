@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class TaskWidget extends StatelessWidget {
@@ -25,7 +26,7 @@ class TaskWidget extends StatelessWidget {
                 backgroundColor: Color(0xFFFE4A49),
                 foregroundColor: Colors.white,
                 icon: Icons.delete,
-                label: 'Delete',
+                label: AppLocalizations.of(context)!.delete,
               ),
               SlidableAction(
                 borderRadius: BorderRadius.circular(20),
@@ -33,7 +34,7 @@ class TaskWidget extends StatelessWidget {
                 backgroundColor: Color(0xFF21B7CA),
                 foregroundColor: Colors.white,
                 icon: Icons.share,
-                label: 'Share',
+                label: AppLocalizations.of(context)!.share,
               ),
             ],
           ),
@@ -47,7 +48,7 @@ class TaskWidget extends StatelessWidget {
                 backgroundColor: Color(0xFF7BC043),
                 foregroundColor: Colors.white,
                 icon: Icons.edit,
-                label: 'Edit',
+                label: AppLocalizations.of(context)!.edit,
               ),
               SlidableAction(
                 borderRadius: BorderRadius.circular(20),
@@ -55,7 +56,7 @@ class TaskWidget extends StatelessWidget {
                 backgroundColor: Color(0xFF0392CF),
                 foregroundColor: Colors.white,
                 icon: Icons.info,
-                label: 'Open',
+                label: AppLocalizations.of(context)!.open,
               ),
             ],
           ),

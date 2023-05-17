@@ -1,6 +1,6 @@
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/widget/task_widget.dart';
+import 'package:todo_app/screens/widget/task_listTile/task_widget.dart';
 
 class TaskTab extends StatelessWidget {
   static const String routeName = 'Task Tab';

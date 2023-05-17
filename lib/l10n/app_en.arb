@@ -15,5 +15,9 @@
   "endTime": "End Time",
   "add": "Add",
   "cancel": "Cancel",
+  "delete": "Delete",
+  "share": "Share",
+  "edit": "Edit",
+  "open": "Open",
   "fieldRequired": "Field Required"
 }
