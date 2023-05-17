@@ -14,6 +14,8 @@ class CustomTaskFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textInputAction:
+          maxLines == 1 ? TextInputAction.next : TextInputAction.newline,
       maxLines: maxLines,
       validator: (value) {
         if (value == null || value.isEmpty) {
