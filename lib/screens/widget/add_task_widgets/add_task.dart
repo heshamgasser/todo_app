@@ -60,7 +60,7 @@ class _AddingTaskState extends State<AddingTask> {
                       Expanded(
                         child: DateTimeWidget(
                           dateText:
-                              AppLocalizations.of(context)!.selectStartDate,
+                              AppLocalizations.of(context)!.selectTaskDate,
                           dateOnTapped: () =>
                               dateTimeProvider.selectStartDate(context),
                           displayedDate: dateTimeProvider.startDate

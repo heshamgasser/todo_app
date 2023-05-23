@@ -1,5 +1,6 @@
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:todo_app/models/taskModel.dart';
 import 'package:todo_app/screens/widget/task_listTile/task_widget.dart';
 import 'package:todo_app/shared/network/firebase/firebase_function.dart';
@@ -42,11 +43,11 @@ class _TaskTabState extends State<TaskTab> {
             if (snapshot.hasError) {
               return Column(
                 children: [
-                  Text('Something Went Wrong'),
+                  Text(AppLocalizations.of(context)!.wrongMessage),
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text('Try Again'),
+                    child: Text(AppLocalizations.of(context)!.tryAgain),
                   ),
                 ],
               );

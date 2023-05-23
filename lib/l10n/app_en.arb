@@ -10,6 +10,7 @@
   "taskTitle": "Enter Your Task Title",
   "taskDetail": "Enter Your Task Details",
   "selectStartDate": "Select Start Date",
+  "selectTaskDate": "Select Task Date",
   "selectEndDate": "Select End Date",
   "startTime": "Start Time",
   "endTime": "End Time",
@@ -20,5 +21,7 @@
   "edit": "Edit",
   "open": "Open",
   "editTask": "Edit Task",
+  "wrongMessage": "Something Went Wrong",
+  "tryAgain": "Try Again",
   "fieldRequired": "Field Required"
 }

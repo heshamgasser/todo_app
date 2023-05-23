@@ -10,6 +10,7 @@
   "taskTitle": "أدخل عنوان مهمتك",
   "taskDetail": "أدخل تفاصيل مهمتك",
   "selectStartDate": "تاريخ البداية",
+  "selectTaskDate": "تاريخ بداية المهمة",
   "selectEndDate": "تاريخ النهاية",
   "startTime": "وقت البداية",
   "endTime": "وقت النهاية",
@@ -20,5 +21,7 @@
   "edit": "تحرير",
   "open": "فتح",
   "editTask": "تحرير المهمة",
+  "wrongMessage": "هناك خطأ ما",
+  "tryAgain": "حاول مرة أخري",
   "fieldRequired": "حقل إجباري"
 }
