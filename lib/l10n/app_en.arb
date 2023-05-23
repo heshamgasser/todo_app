@@ -19,5 +19,6 @@
   "share": "Share",
   "edit": "Edit",
   "open": "Open",
+  "editTask": "Edit Task",
   "fieldRequired": "Field Required"
 }

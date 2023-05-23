@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:todo_app/firebase_options.dart';
 import 'package:todo_app/home_layout/home_layout.dart';
 import 'package:todo_app/provider/app_provider.dart';
+import 'package:todo_app/screens/edit_task_screen.dart';
 import 'package:todo_app/screens/setting_tab.dart';
 import 'package:todo_app/screens/task_tab.dart';
 import 'package:todo_app/shared/style/myThemeData.dart';
@@ -48,6 +49,7 @@ class TodoApp extends StatelessWidget {
         // SplashScreen.roteName:(context) => SplashScreen(),
         TaskTab.routeName: (context) => TaskTab(),
         SettingTab.routeName: (context) => const SettingTab(),
+        EditTasksScreen.routeName: (context) => EditTasksScreen(),
       },
     );
   }

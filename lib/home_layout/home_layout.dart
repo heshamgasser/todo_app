@@ -23,6 +23,12 @@ class HomeLayout extends StatelessWidget {
               AppLocalizations.of(context)!.todoList,
               style: Theme.of(context).textTheme.titleLarge,
             ),
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.settings),
+              ),
+            ],
           ),
           bottomNavigationBar: BottomAppBar(
             color: Theme.of(context).colorScheme.onSurface,
